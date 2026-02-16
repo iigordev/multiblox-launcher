@@ -19,9 +19,9 @@
 
 Because MultiBlox is an independent project, you need to follow these steps to bypass macOS security restrictions:
 
-1.  **Download:** Grab the latest `MultiBlox.zip` from the [Releases](https://github.com/iigordev/multiblox-launcher/releases) page.
+1.  **Download:** Grab the latest `multiblox-universal-darwin.dmg` from the [Releases](https://github.com/iigordev/multiblox-launcher/releases) page.
 2.  **Move to Applications:** Unzip the file and drag `MultiBlox.app` into your **/Applications** folder. 
-    * *Note: The app expects to find Roblox at `/Applications/Roblox.app`.*
+    * *Note: The app expects to find Roblox at `/Applications/Roblox.app`, if you don't have it, please Install Roblox before using.*
 3.  **First Launch (Gatekeeper):**
     * Right-click `MultiBlox.app` and select **Open**.
     * A warning will appear saying Apple cannot check it for malicious software. Click **Open** again.
