@@ -1,4 +1,4 @@
-# MultiBlox (Darwin) 🚀
+# MultiBlox 🚀
 
 **MultiBlox** is a powerful, lightweight multi-instance launcher for Roblox on macOS. It allows you to create, manage, and run multiple independent Roblox instances with custom names and icons, bypassing the standard single-client limitation.
 
