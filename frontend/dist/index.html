@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiBlox</title>
+    <link rel="stylesheet" href="style.css">
+  <script type="module" crossorigin src="/assets/index.1c14ba0c.js"></script>
+  <link rel="stylesheet" href="/assets/index.a1afd57d.css">
+</head>
+<body class="dark-mode">
+
+<nav>
+    <div class="nav-item active" onclick="switchTab('home', this)">
+        <img src="/assets/images/tabIcons/home-tab.png" class="tab-icon" alt="Home">
+        <span>Home</span>
+    </div>
+    <div class="nav-item" onclick="switchTab('settings', this)">
+        <img src="/assets/images/tabIcons/settings-tab.png" class="tab-icon" alt="Settings">
+        <span>Settings</span>
+    </div>
+    <div class="nav-item" onclick="switchTab('about', this)">
+        <img src="/assets/images/tabIcons/about-tab.png" class="tab-icon" alt="About">
+        <span>About</span>
+    </div>
+</nav>
+
+<div id="view-home" class="view">
+    <main id="instance-grid" class="instance-grid">
+        <div class="card create-new" onclick="showModal('create-modal')">
+            <img src="/assets/images/instanceUIButtons/AddInstance.png" class="add-icon-img" alt="Add">
+            <span class="name">Create New Instance</span>
+        </div>
+    </main>
+</div>
+
+<div id="view-settings" class="view hidden">
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <div class="setting-item">
+            <label>Appearance</label>
+            <select id="theme-select" onchange="window.updateTheme(this.value)">
+                <option value="dark">Dark Mode</option>
+                <option value="light">Light Mode</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div id="view-about" class="view hidden">
+    <div class="about-container">
+        <img src="/assets/images/appIcon/AppIcon.png" class="about-logo" alt="MultiBlox Logo">
+        <h1 class="about-title">Multi-Blox Launcher</h1>
+        <p class="about-version">v0.1 (Darwin)</p>
+        <p class="about-credits">created by <strong>iigordev</strong></p>
+        <div class="about-links">
+            <a href="#" onclick="window.BrowserOpenURL('https://discord.gg/usN6xh46Tv')" class="about-link">Discord Support</a>
+            <a href="#" onclick="window.BrowserOpenURL('https://iigordev.github.io/')" class="about-link">My Social Links</a>
+        </div>
+    </div>
+</div>
+
+<div id="overlay" class="overlay hidden" onclick="if(event.target === this) closeModals()">
+
+    <div id="create-modal" class="modal hidden">
+        <div class="modal-header">
+            <h2>Create New Instance</h2>
+        </div>
+
+        <div class="modal-body">
+            <label class="input-label">Instance Name</label>
+            <input type="text" id="instance-name" placeholder="Enter name..." class="custom-input">
+
+            <label class="input-label" style="margin-top: 15px;">Select Icon</label>
+            <div class="icon-selector-container">
+                <div class="icon-grid" id="icon-selector">
+                    <div class="icon-opt selected" onclick="selectIcon('Icon1', this)"><img src="/assets/images/instanceIcons/Icon1.png"></div>
+                    <div class="icon-opt" onclick="selectIcon('Icon2', this)"><img src="/assets/images/instanceIcons/Icon2.png"></div>
+                    <div class="icon-opt" onclick="selectIcon('Icon3', this)"><img src="/assets/images/instanceIcons/Icon3.png"></div>
+                    <div class="icon-opt" onclick="selectIcon('Icon4', this)"><img src="/assets/images/instanceIcons/Icon4.png"></div>
+                    <div class="icon-opt" onclick="selectIcon('Icon5', this)"><img src="/assets/images/instanceIcons/Icon5.png"></div>
+                    <div class="icon-opt" onclick="selectIcon('Icon6', this)"><img src="/assets/images/instanceIcons/Icon6.png"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-actions">
+            <button class="modal-btn cancel" onclick="closeModals()">Cancel</button>
+            <button class="modal-btn create" onclick="handleCreate()">Create</button>
+        </div>
+    </div>
+
+    <div id="delete-modal" class="modal hidden">
+        <div class="modal-header"><h2>Delete Instance?</h2></div>
+        <div class="modal-body">
+            <p>Are you sure you want to delete <strong id="delete-instance-name"></strong>?</p>
+            <p style="color: var(--status-red); font-size: 0.85rem; margin-top: 10px; font-weight: 500;">This action cannot be undone.</p>
+        </div>
+        <div class="modal-actions">
+            <button class="modal-btn cancel" onclick="closeModals()">Cancel</button>
+            <button class="modal-btn create" style="background: var(--status-red);" onclick="handleDelete()">Delete</button>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-header"><h2>Edit Instance</h2></div>
+        <div class="modal-body">
+            <label class="input-label">New Name</label>
+            <input type="text" id="edit-instance-name" class="custom-input" placeholder="Enter new name...">
+        </div>
+        <div class="modal-actions">
+            <button class="modal-btn cancel" onclick="closeModals()">Cancel</button>
+            <button class="modal-btn create" onclick="handleEditSave()">Save Changes</button>
+        </div>
+    </div>
+
+</div>
+
+<div id="context-menu" class="hidden">
+    <div class="menu-item" id="menu-edit">Edit Instance</div>
+    <div class="menu-item danger" id="menu-delete">Delete Instance</div>
+</div>
+
+
+<div id="notification-toast" class="hidden"></div>
+</body>
+</html>
