@@ -1,5 +1,7 @@
 # MultiBlox 🚀
 
+## CHECK THE BOTTOM OF THIS TEXT IF YOU'RE USING 0.1.1 OR NEWER!!!
+
 **MultiBlox** is a powerful, lightweight multi-instance launcher for Roblox on macOS. It allows you to create, manage, and run multiple independent Roblox instances with custom names and icons, bypassing the standard single-client limitation.
 
 
@@ -38,9 +40,17 @@ Because MultiBlox is an independent project, you need to follow these steps to b
 
 ---
 
-## ⚠️ Troubleshooting
+## ⚠️ IMPORTANT!
 
 ### "App is Damaged" or "Cannot be Opened"
 If macOS refuses to open the app even after right-clicking, open your terminal and run:
 ```bash
 xattr -rd com.apple.quarantine /Applications/MultiBlox.app
+```
+
+### Directory Permission
+MultiBlox requires permissions to use the default Instance folder, unless you're using a custom directory.
+If you get errors (or your instances won't run/be created), use this following command in terminal:
+```bash
+sudo chmod -R 777 /Applications/MultiBlox
+```
