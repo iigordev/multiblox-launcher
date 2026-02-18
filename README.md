@@ -1,4 +1,4 @@
-# MultiBlox 🚀
+# Multi-Roblox Launcher 🚀
 
 ## CHECK THE BOTTOM OF THIS TEXT IF YOU'RE USING 0.1.1 OR NEWER!!!
 
