@@ -2,7 +2,7 @@
 
 ## CHECK THE BOTTOM OF THIS TEXT IF YOU'RE USING 0.1.1 OR NEWER!!!
 
-**MultiBlox** is a powerful, lightweight multi-instance launcher for Roblox on macOS. It allows you to create, manage, and run multiple independent Roblox instances with custom names and icons, bypassing the standard single-client limitation.
+**Multi-Roblox Launcher** is a powerful, lightweight multi-instance launcher for Roblox on macOS. It allows you to create, manage, and run multiple independent Roblox instances with custom names and icons, bypassing the standard single-client limitation.
 
 
 
@@ -33,7 +33,7 @@ Because MultiBlox is an independent project, you need to follow these steps to b
 
 ## 🛠 How to Use
 
-1.  **Create:** Click the **"Create New Instance"** card.
+1.  **Create:** Click the **"Create New Instance"** button.
 2.  **Customize:** Enter a name (e.g., "Alt1") and pick an icon.
 3.  **Launch:** Hover over your new instance and hit the **Play** button.
 4.  **Manage:** Use the **Quit** button to kill a specific instance or **Right-Click** a card to delete it.
